@@ -22,3 +22,27 @@ This project is part of the CMU Security Expert Course, with the goal of making 
 2. Implement authentication and authorization measures.
 3. Ensure data integrity and confidentiality.
 4. Conduct thorough security testing and validation.
+
+## Server Build and Execution Instructions
+
+### 1. Build
+1. Navigate to the `DemoCannon` folder.
+2. Run the following command to build the project:
+    ```sh
+    $ ./build.sh
+    ```
+
+### 2. Create and Install Cryptographic Keys
+1. Connect to the server via SSH.
+2. Navigate to the directory where the `DemoCannon` program is located.
+3. Run the following commands to create two keys:
+    ```sh
+    $ dd if=/dev/urandom of=./enc_key bs=1 count=32
+    $ dd if=/dev/urandom of=./hmac_key bs=1 count=32
+    ```
+
+### 3. Execution
+Run the following command to start the program:
+    ```sh
+    $ ./run.sh
+    ```
